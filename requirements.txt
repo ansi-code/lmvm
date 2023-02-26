@@ -1,1 +1,1 @@
-pip install openai
+openai
