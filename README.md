@@ -5,15 +5,6 @@ The VM includes a GPT-based policy agent that can execute command line actions a
 The state space is infinite and the agent has a memory, which is included in every request and response. 
 The memory is a compressed JSON structure with a maximum size of 128 tokens.
 
-## Features
-
-- Store your personal AI model on the InterPlanetary Data Wallet (IPDW)
-- Publish a without centralized repositories
-- Take advantage of browser-based inferences
-- Personalize your AI model through fine-tuning
-- Enjoy zero-backend privacy for your AI model
-- And much more!
-
 ## Getting Started
 
 To use LMVM, you will need to have Docker and Python installed on your system. 
@@ -35,7 +26,7 @@ Set up your OpenAI API key by setting the OPENAI_API_KEY environment variable.
 $ export OPENAI_API_KEY=YOUR_API_KEY
 ```
 
-Run the lmvm.py script to start the VM.
+Run the main.py script to start the VM.
 
 ```bash
 $ python src/main.py

@@ -8,7 +8,7 @@ class LmAgent:
     def __init__(self, openai_api_key):
         openai.api_key = openai_api_key
 
-    def run(self, goal):
+    def run(self, goal: str) -> None:
         state = ""
         action = ""
         result = ""
@@ -34,14 +34,14 @@ class LmAgent:
             if match is None:
                 break
             next_action = match.group(1)
-            if next_action is "":
+            if next_action == "":
                 break
 
             match = re.search(r"NEXT_STATE \"(.*)\"", message)
             if match is None:
                 break
             next_state = match.group(1)
-            if next_state is "":
+            if next_state == "":
                 break
 
             state = next_state
@@ -49,8 +49,6 @@ class LmAgent:
 
             print(f"Executing: {action}")
             result = subprocess.getoutput(action)
-
-        return result
 
 
 HEADER = """
